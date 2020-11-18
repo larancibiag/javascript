@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <title>Colores</title>
+      <style>
+         #box {
+         width: 170px;
+         height: 170px;
+         background-color: red;
+         border-radius: 5px;
+         }
+         #cien{
+         background-color: white;
+         border: none;
+         border-radius: 10px;
+         margin-top: 10px;
+         margin-left: 10px;
+         }
+         #cuatrocientos {
+         background-color: white;
+         border: none;
+         border-radius: 10px;
+         margin-top: 10px;
+         }
+         #green{
+         margin-top: 10px;
+         background-color: rgb(228, 228, 228);
+         border: none;
+         border-radius: 10px;
+         color: rgb(72, 72, 72);
+         }
+         #yellow {
+         margin-top: 10px;
+         background-color: rgb(228, 228, 228);
+         border: none;
+         border-radius: 10px;
+         color: rgb(72, 72, 72);
+         }
+         #red {
+         margin-top: 10px;
+         background-color: rgb(228, 228, 228);
+         border: none;
+         border-radius: 10px;
+         color: rgb(72, 72, 72);
+         }
+      </style>
+   </head>
+   <body id="body">
+      <div id="box">
+         <button id="cien" onClick="cambiarSize(100)">100</button>
+         <button id="cuatrocientos" onClick="cambiarSize(400)">400</button>
+      </div>
+      <div>
+         <button id="green">Verde</button>
+         <button id="yellow">Amarillo</button>
+         <button id="red">Rojo</button>
+      </div>
+      <script>
+         var caja = document.getElementById("box");
+             var verde = document.getElementById("green");
+             var amarillo = document.getElementById("yellow");
+             var rojo = document.getElementById("red");
+         
+             verde.addEventListener('click', function () {
+                     cambiar_color("green")
+             });
+         
+             amarillo.addEventListener('click', function () {
+                     cambiar_color("yellow")
+             });
+         
+             rojo.addEventListener('click', function () {
+                     cambiar_color("red")
+             });
+         
+         function cambiar_color(color){
+         caja.style.backgroundColor = color;
+         }
+         
+         function cambiarSize(num){
+         document.getElementById("box").style.height = num + "px";
+         document.getElementById("box").style.width = num + "px";
+         }
+      </script>
+   </body>
+</html>
